@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    #url: jdbc:postgresql://127.0.0.1:5432/agenda
+    url: jdbc:postgresql://db-agenda:5432/agenda
+    username: postgres
+    password: p0stgr3s
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
