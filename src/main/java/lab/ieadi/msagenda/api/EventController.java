@@ -53,7 +53,7 @@ public class EventController {
         return new ResponseEntity<>(eventSaved, HttpStatus.OK);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping(value = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<EventResponseDTO> update(@PathVariable("id") final Long id, @Valid @RequestBody final EventRequestDTO requestEventDTO){
         var eventUpdated = service.update(id, requestEventDTO);
         return new ResponseEntity<>(eventUpdated, HttpStatus.OK);
